@@ -1,0 +1,119 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+  color: white;
+}
+
+h1 {
+  margin: 20px 0;
+  font-size: 2.5rem;
+}
+
+#moves {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 15px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #8a2be2, #4b0082);
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.card.flipped {
+  background-color: #ffd700;
+  color: black;
+}
+
+.card.matched {
+  background-color: #32cd32;
+  cursor: default;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.modal-content h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.modal-content p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.modal-content button {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.modal-content button:hover {
+  background: #0056b3;
+}
